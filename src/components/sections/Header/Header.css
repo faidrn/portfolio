@@ -1,3 +1,40 @@
 .header{
     background: var(--react-blue);
 }
+
+.header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler{
+    /* visibility: hidden; */
+    display: none;
+    text-decoration: none;
+}
+
+.collapse{
+    display: block;
+}
+
+.navbar-collapse ul{
+    list-style-type: none;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+/* Estilos responsivos básicos */
+@media (max-width: 768px) {
+    .navbar-toggler{
+        display: block;
+        /* visibility: visible; */
+    }
+
+    .collapse{
+        display: none;
+    }
+}

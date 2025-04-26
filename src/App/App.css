@@ -4,10 +4,10 @@
   --text-light: #e0e0e0;
 }
 
-*{
+/* *{
   margin: 0;
   padding: 0;
-}
+} */
 
 body{
   background: var(--dark-bg);
@@ -15,15 +15,16 @@ body{
 }
 
 .portfolio-app {
-  /* max-width: 1200px; */
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
 /* Estilos responsivos básicos */
 @media (max-width: 768px) {
   .portfolio-app {
-    /* padding: 1rem; */
+    padding: 1rem;
+    padding-top: 3rem;
   }
 }

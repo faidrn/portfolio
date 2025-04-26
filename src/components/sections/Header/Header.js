@@ -1,6 +1,8 @@
+import { MenuIcon } from '../../ui/icons/MenuIcon/MenuIcon';
 import './Header.css';
 
-const Header = () => {
+
+const Header = (props) => {
   return (
     <header className="header">
       <nav>
@@ -8,7 +10,11 @@ const Header = () => {
         <h1>Fredy Izquierdo</h1>
         </div>
         <a href='#' className='navbar-toggler'>
-          <span className='navbar-toggle-icon'>icono hambuerguesa</span>
+          <span className='navbar-toggle-icon'>
+            <MenuIcon 
+              onCollapseMenuClick={props.onCollapseMenuClick}
+            />
+          </span>
         </a>
         <div className='collapse navbar-collapse' id='navbar-menus'>
           <ul className='navbar-menus-list'>
