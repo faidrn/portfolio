@@ -1,23 +1,21 @@
-import { ReactComponent as CollapsseIconSVG } from '../../../../assets/icons/collapse-menu.svg'
+import { ReactComponent as DownloadIconSVG} from '../../../../assets/icons/download-icon.svg';
 import './PortfolioIcons.css';
 
 const iconTypes = {
-    "collapseMenuIcon": <CollapsseIconSVG className='icon'/>, 
+    "downloadIcon": <DownloadIconSVG className='icon'/>, 
 };
 
 const titleIcons = {
-    "collapseMenuIcon": "", 
+    "downloadIcon": "", 
 };
 
 const classIcons = {
-    "collapseMenuIcon": "", 
+    "downloadIcon": "download-icon", 
 };
 
 
 function PortfolioIcons({ type, fill, cursorPointer, onClick }){
-    let cursorPointerIcon = (cursorPointer) ? 
-        cursorPointerIcon = "cursor-pointer" : 
-        cursorPointerIcon = '';
+    const cursorPointerIcon = cursorPointer ? "cursor-pointer" : '';
 
     return (
         <span 

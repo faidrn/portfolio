@@ -1,9 +1,10 @@
 import './Button.css';
 
-const Button = ({ text, onClick }) => {
+const Button = ({ text, onClick, className, icon }) => {
   return (
-    <button className="custom-button" onClick={onClick}>
+    <button className={`${className}`} onClick={onClick}>
       {text}
+      {icon && <span>{icon}</span>}
     </button>
   );
 };
