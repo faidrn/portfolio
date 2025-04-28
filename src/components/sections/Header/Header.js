@@ -21,8 +21,8 @@ const Header = () => {
     };
 
     // Establecer el item activo basado en la ruta actual
-    const currentPath = window.location.pathname;
-    setActiveItem(currentPath);
+    /* const currentPath = window.location.pathname;
+    setActiveItem(currentPath); */
 
     // Verificar al montar el componente
     handleResize();
@@ -73,14 +73,9 @@ const Header = () => {
                   <Link 
                     to={item.path} 
                     className={activeItem === item.path ? 'active' : ''} 
+                    onClick={() => handleItemClick(item.path)}
                   >
-                    {/* <a 
-                      href={item.path} 
-                      className={activeItem === item.path ? 'active' : ''} 
-                      onClick={() => handleItemClick(item.path)}
-                    > */}
-                      {item.label}
-                    {/* </a> */}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -129,14 +124,9 @@ const Header = () => {
                   <Link 
                     to={item.path} 
                     className={activeItem === item.path ? 'active' : ''} 
+                    onClick={() => handleItemClick(item.path)}
                   >
-                    {/* <a 
-                      href={item.path} 
-                      className={activeItem === item.path ? 'active' : ''} 
-                      onClick={() => handleItemClick(item.path)}
-                    > */}
                       {item.label}
-                    {/* </a> */}
                   </Link>
                 </li>
               ))}
