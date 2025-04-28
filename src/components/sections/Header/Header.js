@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../ui/Button/Button';
 import { DownloadIcon } from '../../ui/icons/DownloadIcon';
 import './Header.css';
@@ -56,15 +57,11 @@ const Header = () => {
       <nav className='navbar'>
         <div className='navbar-container'>
           <div className='navbar-logo'>
-            <h1>Fredy Izquierdo</h1>
+            <Link to={'/'} className='nav-links'>
+              <h1>Fredy Izquierdo</h1>
+            </Link>
           </div>
-          {/* <a href='#' className='navbar-toggler'>
-            <span className='navbar-toggle-icon'>
-              <MenuIcon 
-                onCollapseMenuClick={props.onCollapseMenuClick}
-              />
-            </span>
-          </a> */}
+          
           {/* Menú para desktop (siempre visible en pantallas grandes) */}
           <div 
             className="navbar-links" 
@@ -73,13 +70,18 @@ const Header = () => {
             <ul>
               {menuItems.map((item) => (
                 <li key={item.path}>
-                  <a 
-                    href={item.path} 
+                  <Link 
+                    to={item.path} 
                     className={activeItem === item.path ? 'active' : ''} 
-                    onClick={() => handleItemClick(item.path)}
                   >
-                    {item.label}
-                  </a>
+                    {/* <a 
+                      href={item.path} 
+                      className={activeItem === item.path ? 'active' : ''} 
+                      onClick={() => handleItemClick(item.path)}
+                    > */}
+                      {item.label}
+                    {/* </a> */}
+                  </Link>
                 </li>
               ))}
               <li>
@@ -124,13 +126,18 @@ const Header = () => {
             <ul>
               {menuItems.map((item) => (
                 <li key={item.path}>
-                  <a 
-                    href={item.path} 
-                    className={activeItem === item.path ? 'active' : ''}
-                    onClick={() => handleItemClick(item.path)}
+                  <Link 
+                    to={item.path} 
+                    className={activeItem === item.path ? 'active' : ''} 
                   >
-                    {item.label}
-                  </a>
+                    {/* <a 
+                      href={item.path} 
+                      className={activeItem === item.path ? 'active' : ''} 
+                      onClick={() => handleItemClick(item.path)}
+                    > */}
+                      {item.label}
+                    {/* </a> */}
+                  </Link>
                 </li>
               ))}
               <li>
