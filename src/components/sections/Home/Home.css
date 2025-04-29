@@ -1,0 +1,71 @@
+.carousel-3d{
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.tech-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear;
+}
+
+.tech-logo{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Posicionamiento 3D de los logos (formando un círculo) */
+.tech-logo:nth-child(1){
+    transform: translate(-50%, -50%) rotateY(0deg) translateZ(120px); /* HTML */
+}
+
+.tech-logo:nth-child(2){
+    transform: translate(-50%, -50%) rotateY(90deg) translateZ(120px); /* CSS */
+}
+
+.tech-logo:nth-child(3){
+    transform: translate(-50%, -50%) rotateY(180deg) translateZ(120px); /* JS*/
+}
+
+.tech-logo:nth-child(4){
+    transform: translate(-50%, -50%) rotateY(270deg) translateZ(120px); /* React*/
+}
+
+/* Keyframes: Rotación infinita */
+@keyframes rotate{
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Efecto hover (pausa la animación) */
+.carousel-3d:hover .tech-container{
+    animation-play-state: paused;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 600px){
+    .carousel-3d{
+        perspective: 500px;
+    }
+    
+    .tech-logo{
+        width: 60px;
+        height: 60px;
+    }
+}

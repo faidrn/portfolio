@@ -31,8 +31,16 @@ function Home (){
         
         <div className="about-grid">
           {/* Columna izquierda - Foto */}
-          <div className="about-photo">
+          {/* <div className="about-photo">
             <div className="photo-placeholder"></div>
+          </div> */}
+          <div className="carousel-3d">
+            <div className="tech-container">
+            <img className="tech-logo" src="/assets\images\logo-html.png" alt="HTML" />
+            <img className="tech-logo" src="/assets/images/logo-css.png" alt="CSS" />
+            <img className="tech-logo" src="/assets/images/logo-js.png" alt="JavaScript" />
+            <img className="tech-logo" src="/assets/images/logo-react.png" alt="React" />
+            </div>
           </div>
 
           {/* Columna derecha - Información */}
