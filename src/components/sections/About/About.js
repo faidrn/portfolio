@@ -5,29 +5,25 @@ import './About.css';
 const About = () => {
   // Datos del perfil
   const profile = {
-    name: "Carlos Martínez",
-    title: "Ingeniero de Sistemas",
-    specialization: "Desarrollador Frontend",
-    focus: "Especializado en React.js",
-    experience: "5+ años desarrollando aplicaciones web",
-    education: "Ingeniería de Sistemas - Universidad Nacional",
+    specialization: "Frontend Developer", 
+    technology: "React.js", 
+    description: "Systems Engineer expert in web development, with skills to design, implement and maintain applications and websites, focused on user experience, security, performance and scalability, as well as project management.",
     skills: [
       "React.js", "JavaScript (ES6+)", "HTML5/CSS3", 
-      "TypeScript", "Redux", "Styled Components", 
+      "TypeScript", "Python",  
       "Git", "Responsive Design"
     ],
-    passions: [
-      "Crear interfaces intuitivas y accesibles",
-      "Optimización de rendimiento frontend",
-      "Componentes reutilizables",
-      "UI/UX Design"
+    language: [
+      "Spanish - Native speaker",
+      "English - B2",
+      "Slovak - A2",
     ]
   };
 
   return (
     <section id="about" className="about-section">
       <div className="about-container">
-        <h2 className="section-title">Sobre Mí</h2>
+        <h2 className="section-title">Fredy Izquierdo</h2>
         
         <div className="about-grid">
           {/* Columna izquierda - Foto */}
@@ -37,22 +33,19 @@ const About = () => {
 
           {/* Columna derecha - Información */}
           <div className="about-content">
-            <h3 className="about-name">{profile.name}</h3>
-            <p className="about-title">{profile.title} | {profile.specialization}</p>
+            <h3 className="about-name">{profile.specialization}</h3>
+            <p className="about-title">{profile.technology}</p>
             
             <div className="about-description">
               <p>
-                {profile.focus} con {profile.experience}. Graduado en {profile.education}.
+                {profile.description}
               </p>
-              <p>
-                Apasionado por crear soluciones web eficientes, escalables y con 
-                excelente experiencia de usuario.
-              </p>
+              <p></p>
             </div>
 
             {/* Habilidades técnicas */}
             <div className="skills-section">
-              <h4>Habilidades Técnicas:</h4>
+              <h4>Technical Skills:</h4>
               <ul className="skills-list">
                 {profile.skills.map((skill, index) => (
                   <li key={index} className="skill-item">
@@ -64,9 +57,9 @@ const About = () => {
 
             {/* Intereses */}
             <div className="passions-section">
-              <h4>Lo que me apasiona:</h4>
+              <h4>Laguage Skills:</h4>
               <ul className="passions-list">
-                {profile.passions.map((passion, index) => (
+                {profile.language.map((passion, index) => (
                   <li key={index} className="passion-item">
                     {passion}
                   </li>
