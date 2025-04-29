@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../ui/Button/Button';
-import { DownloadIcon } from '../../ui/icons/DownloadIcon';
 import './Header.css';
 
 
@@ -50,7 +49,7 @@ const Header = () => {
     { path: '/contact', label: 'Contact' },
   ];
 
-  const RESUME_URL = "../../../public\documents\CV_Fredy_Izquierdo.pdf";
+  const RESUME_URL = "https://www.linkedin.com/in/fredy-izquierdo-897740344/";
 
   return (
     <header className="header">
@@ -84,15 +83,8 @@ const Header = () => {
                   text="Resume" 
                   className="resume cursor-pointer"
                   onClick={() => {
-                    // Crear enlace temporal para forzar la descarga
-                    const link = document.createElement('a');
-                    link.href = RESUME_URL;
-                    link.download = 'CV_Fredy_Izquierdo.pdf';  // Nombre sugerido al descargar
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
+                    window.open(RESUME_URL, '_blank', 'noopener, noreferrer')
                   }} 
-                  icon={<DownloadIcon />}
                 />
               </li>
             </ul>
@@ -135,15 +127,8 @@ const Header = () => {
                   text="Resume" 
                   className="resume cursor-pointer"
                   onClick={() => {
-                    // Crear enlace temporal para forzar la descarga
-                    const link = document.createElement('a');
-                    link.href = RESUME_URL;
-                    link.download = 'CV_Fredy_Izquierdo.pdf';  // Nombre sugerido al descargar
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
+                    window.open(RESUME_URL, '_blank', 'noopener, noreferrer')
                   }} 
-                  icon={<DownloadIcon />}
                 />
               </li>
             </ul>
