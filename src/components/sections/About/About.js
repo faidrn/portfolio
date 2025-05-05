@@ -1,8 +1,23 @@
 // src/components/sections/About/About.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 
 const About = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Efecto para detectar cambios en el tamaño de la pantalla
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+  
+      // Verificar al montar el componente
+      handleResize();
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
   // Datos del perfil
   const profile = {
     specialization: "Frontend Developer", 
@@ -26,16 +41,27 @@ const About = () => {
         <h2 className="section-title">Fredy Izquierdo</h2>
         
         <div className="about-grid">
-          {/* Columna izquierda - Foto */}
-          <div className="about-photo">
-            <div className="photo-placeholder"></div>
-          </div>
+          {/* Columna izquierda - Foto - Para desktop (siempre visible en pantallas grandes) */}
+          {!isMobile && (
+            <div className="about-photo">
+              <div class="easter-egg">npm install superhero</div>
+              <div className="photo-placeholder"></div>
+            </div>
+          )}
 
           {/* Columna derecha - Información */}
           <div className="about-content">
             <h3 className="about-name">{profile.specialization}</h3>
             <p className="about-title">{profile.technology}</p>
             
+            {/* Foto solo móvil */}
+            {isMobile && (
+              <div className="about-photo">
+                <div class="easter-egg">npm install superhero</div>
+                <div className="photo-placeholder"></div>
+              </div>
+            )}
+
             <div className="about-description">
               <p>
                 {profile.description}

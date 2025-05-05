@@ -29,15 +29,31 @@
     border-radius: 50%;
     background-color: #e0e0e0;
     margin: 0 auto;
-    background-image: url('../../../assets/profile.jpg');
+    background-image: url('../../../../public/assets/images/img-about.jpg');
     background-size: cover;
     background-position: center;
     border: 5px solid #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
+
+  .easter-egg {
+    display: none; /* Hide the easter egg by default */
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    top: 75%;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 0.5px 0.5px 2px var(--react-blue);
+  }
+  
+  .about-photo:hover .easter-egg {
+    display: block; /* Show the easter egg when hovering over the parent */
+  }
   
   .about-name {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #2c3e50;
     margin-bottom: 0.5rem;
   }
@@ -90,5 +106,14 @@
     
     .about-photo {
       margin-bottom: 2rem;
+    }
+
+    .about-content{
+      margin-top: -2rem
+    }
+
+    .easter-egg {
+      left: 45%;
+      top: 85%;
     }
   }
