@@ -1,0 +1,18 @@
+.contact-image {
+    position: relative;
+    margin: 2rem 0;
+  }
+  .code-icon {
+    color: #61dafb; /* React blue */
+    opacity: 0.7;
+  }
+  .mail-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: #61dafb;
+    border-radius: 50%;
+    padding: 15px;
+  }
