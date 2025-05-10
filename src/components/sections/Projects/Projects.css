@@ -1,28 +1,73 @@
-.projects {
-    margin: 4rem 0;
-  }
+/* :root {
+  --react-blue: #61dafb;
+  --dark-bg: #121212;
+  --text-light: #e0e0e0;
+} */
+
+.projects-section{
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
   
-  .grid {
+  .projects-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   
-  .card {
+  .project-card {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex; /* Convierte el contenedor padre en un flex container */
+    flex-direction: column; /* Apila los elementos hijos verticalmente */
+    justify-content: space-between; /* Distribuye el espacio, empujando el último elemento hacia abajo */
+    height: 90%;
+  }
+
+  .project-card h3{
+    font-size: 1.7rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p{
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
   }
   
-  .tech {
-    color: #666;
+  .technologies {
+    /* color: #666;
     font-size: 0.9rem;
-    margin: 1rem 0;
+    margin: 1rem 0; */
+
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
   }
   
-  .buttons {
+  .buttons-container{
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: auto; /* Esto empuja el elemento al final del flex container */
   }
+
+  .section-title-projects {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    margin-left: -0.7rem;
+    width: 80%;
+  }
+}
