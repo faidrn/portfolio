@@ -1,4 +1,6 @@
-/* src/components/sections/About/About.css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
 .about-section {
     padding: 4rem 2rem;
     background-color: #f8f9fa;
@@ -39,13 +41,41 @@
   .easter-egg {
     display: none; /* Hide the easter egg by default */
     padding: 10px;
-    position: absolute;
+    /* position: absolute;
     z-index: 1;
     left: 25%;
-    top: 75%;
+    top: 75%; */
     text-align: center;
     color: #2c3e50;
     text-shadow: 0.5px 0.5px 2px var(--react-blue);
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .typing-animation{
+    width: 0; /* Ancho inicial */
+    overflow: hidden; /* Oculta el texto que excede el ancho */
+    border-right: .15em solid #2c3e50; /* Simula un cursor parpadeante */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    margin: 0 auto; /* Centra el texto si es necesario */
+    letter-spacing: .15em; /* Espacio entre letras */
+    animation: 
+      typing 3.5s steps(40, end), /* Animación de escritura */
+      blink-caret .75s step-end infinite; /* Animación del cursor */
+  }
+
+  /* Animación de escritura */
+  @keyframes typing {
+    from { width: 0 }
+    to {width: 100%} 
+  }
+
+  /* Animación del cursor parpadeante */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #2c3e50 }
   }
   
   .about-photo:hover .easter-egg {
@@ -112,8 +142,8 @@
       margin-top: -2rem
     }
 
-    .easter-egg {
+    /* .easter-egg {
       left: 45%;
       top: 85%;
-    }
+    } */
   }

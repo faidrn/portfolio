@@ -44,8 +44,8 @@ const About = () => {
           {/* Columna izquierda - Foto - Para desktop (siempre visible en pantallas grandes) */}
           {!isMobile && (
             <div className="about-photo">
-              <div class="easter-egg">npm install superhero</div>
               <div className="photo-placeholder"></div>
+              <div class="easter-egg typing-animation">npm install superhero</div>
             </div>
           )}
 
@@ -57,8 +57,8 @@ const About = () => {
             {/* Foto solo móvil */}
             {isMobile && (
               <div className="about-photo">
-                <div class="easter-egg">npm install superhero</div>
                 <div className="photo-placeholder"></div>
+                <div class="easter-egg typing-animation">npm install superhero</div>
               </div>
             )}
 
