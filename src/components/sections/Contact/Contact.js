@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMail, FiCode } from 'react-icons/fi'; // React Icons
+//import { FiMail, FiCode } from 'react-icons/fi'; // React Icons
 import { ContactForm } from '../../ui/ContactForm/ContactForm';
 import './Contact.css';
 

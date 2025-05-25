@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import './ContactForm.css';
 import Button from '../Button/Button';
+//import { FiMail, FiCode } from 'react-icons/fi'; // React Icons
+import './ContactForm.css';
 
 
 function ContactForm (){
@@ -34,15 +35,16 @@ function ContactForm (){
         }
     };
 
+
     return (
         <form
-            action={"https://formsubmit.co/fredy_izquierdo@hotmail.es"}
+            action={"https://formsubmit.co/m3talmaniaco@gmail.com"}
             method="POST"
             onSubmit={handleSubmit}
             className="contact-form"
         >
             <input type="hidden" name="_captcha" value={"false"} />
-            <input type="hidden" name="_subject" value={"Nuevo mensaje desde mi portfolio web"} />
+            {/* <input type="hidden" name="_subject" value={"Nuevo mensaje desde mi portfolio web"} /> */}
 
             <div className="form-group form-group--height">
                 <input 
@@ -68,7 +70,7 @@ function ContactForm (){
                 <input 
                   type="text" 
                   id="subject" 
-                  name="subject" 
+                  name="_subject" 
                   placeholder="Subject" 
                   className="source-code-pro-font source-code-pro-400 font-size-text texts"
                   required 
@@ -91,12 +93,11 @@ function ContactForm (){
               <Button 
                   text="Send" 
                   className="resume cursor-pointer"
-                  onClick={() => {
-                    window.open('', '_blank', 'noopener, noreferrer')
-                  }} 
+                  type={'submit'}
                 />
             </div>
             {status && <p className="form-status">{status}</p>}
+            
         </form>
     );
 }

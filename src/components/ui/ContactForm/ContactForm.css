@@ -51,6 +51,75 @@ textarea{
     width: 20rem;
 }
 
+/* Enviar Email */
+/* Estilos base para el mensaje de estado */
+.form-status {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.3s ease-out;
+  border-left: 4px solid transparent;
+}
+
+/* Iconos (puedes usar react-icons o SVG) */
+.form-status::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Mensaje "Enviando..." (estado de carga) */
+.form-status.sending {
+  background-color: #f0f7ff;
+  color: #1a73e8;
+  border-left-color: #1a73e8;
+}
+
+.form-status.sending::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231a73e8'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2z'/%3E%3C/svg%3E");
+  animation: spin 1s linear infinite;
+}
+
+/* Mensaje de éxito */
+.form-status.success {
+  background-color: #f0fff4;
+  color: #2e7d32;
+  border-left-color: #2e7d32;
+}
+
+.form-status.success::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232e7d32'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+}
+
+/* Mensaje de error */
+.form-status.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left-color: #c62828;
+}
+
+.form-status.error::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c62828'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 
 
 /* Responsive */
