@@ -47,3 +47,17 @@
     border-radius: 50%;
     padding: 15px;
   }
+
+  /* Responsive */
+@media (max-width: 743px) {
+    .contact-content {
+        width: 17rem;
+    }
+}
+
+@media (min-width: 744px) and (max-width: 768px) {
+    .image-container{
+      width: 90%;
+      display: flex;
+    }
+}

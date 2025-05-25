@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+.source-code-pro-font {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.source-code-pro-400 {
+  font-weight: 400;
+}
+
+.font-size-text{
+    font-size: 1.1rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 0.8rem;
+    width: 43rem;
+}
+
+.form-group-btn{
+    padding: 0.8rem;
+    width: 43rem;
+}
+
+textarea{
+    height: 8rem;
+}
+
+.texts{
+    width: 41.5rem;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+.texts:focus{
+    border-color: var(--react-blue);
+    outline: none; /* Quitar el contorno predeterminado del navegador */
+    box-shadow: 0 0 5px 2px var(--text-light); /* Añadir una sombra */
+}
+
+.width-20{
+    width: 20rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 743px) {
+    .form-group {
+        width: 16.5rem;
+        flex-direction: column;
+    }
+
+    .form-group--height{
+        height: 7rem;
+    }
+
+    .texts{
+        width: 16rem;
+    }
+
+    .form-group-btn{
+        width: 14.9rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 744px) and (max-width: 768px) {
+    .form-group {
+        width: 40rem;
+    }
+
+    .texts{
+        width: 39rem;
+    }
+
+    .width-20{
+        width: 19rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 800px) {
+    .form-group {
+        width: 22rem;
+        flex-direction: column;
+    }
+
+    .form-group--height{
+        height: 7rem;
+    }
+
+    .texts{
+        width: 22rem;
+    }
+
+    .form-group-btn{
+        width: 14.9rem;
+        display: block;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 912px) {
+    .form-group {
+        width: 28rem;
+        flex-direction: column;
+    }
+
+    .form-group--height{
+        height: 7rem;
+    }
+
+    .texts{
+        width: 28rem;
+    }
+
+    .form-group-btn{
+        width: 14.9rem;
+        padding-left: 0;
+    }
+}

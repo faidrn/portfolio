@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import './ContactForm.css';
+import Button from '../Button/Button';
 
 
 function ContactForm (){
@@ -23,7 +24,7 @@ function ContactForm (){
           });
           
           if (response.ok) {
-            setStatus('Thank you! I’ll respond shortly.');
+            setStatus("Thank you! I'll respond shortly.");
             form.reset();
           } else {
             throw new Error('Submission failed');
@@ -43,22 +44,58 @@ function ContactForm (){
             <input type="hidden" name="_captcha" value={"false"} />
             <input type="hidden" name="_subject" value={"Nuevo mensaje desde mi portfolio web"} />
 
+            <div className="form-group form-group--height">
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  placeholder="Name" 
+                  className="source-code-pro-font source-code-pro-400 font-size-text width-20 texts" 
+                />
+            
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Email" 
+                  className="source-code-pro-font source-code-pro-400 font-size-text width-20 texts"
+                  required 
+                />
+            </div>
+
             <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  placeholder="Subject" 
+                  className="source-code-pro-font source-code-pro-400 font-size-text texts"
+                  required 
+                />
             </div>
             
             <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                {/* <label htmlFor="message">Message</label> */}
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  placeholder="Type your message here" 
+                  className="source-code-pro-font source-code-pro-400 font-size-text texts"
+                  required
+                >
+                </textarea>
             </div>
             
-            <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+            <div className="form-group-btn">
+              <Button 
+                  text="Send" 
+                  className="resume cursor-pointer"
+                  onClick={() => {
+                    window.open('', '_blank', 'noopener, noreferrer')
+                  }} 
+                />
             </div>
-            
-            <button type="submit">Send menssage</button>
             {status && <p className="form-status">{status}</p>}
         </form>
     );
